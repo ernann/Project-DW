@@ -1,0 +1,137 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ropa Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: #262533;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.my-nav {
+  background-color: #f9cc41 !important;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-link {
+  color: black !important;
+  font-weight: 500;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* Hero Contact */
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.contact-hero h2 {
+  font-size: 42px;
+}
+
+.highlight {
+  color: #f9cc41;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+/* Contact Form & Info */
+.contact-section .contact-form h3,
+.contact-section .contact-info h3 {
+  color: #f9cc41;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #111;
+  border: 2px solid #f9cc41;
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.btn-submit {
+  background-color: #f9cc41;
+  color: #111;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #111;
+  color: #f9cc41;
+  border: 2px solid #f9cc41;
+}
+
+/* Contact Info */
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #f9cc41;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 22px;
+}
+
+.social-icons a {
+  color: #f9cc41;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #f9cc41;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section .row {
+    flex-direction: column;
+  }
+}

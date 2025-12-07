@@ -1,0 +1,119 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ropa Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: #262533;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.my-nav {
+  background-color: #f9cc41 !important;
+  padding: 5px 0;
+  position: sticky; /* menempel di atas */
+  top: 0;
+  z-index: 999;
+}
+
+.nav-link {
+  color: black !important;
+  font-weight: 500;
+  margin-left: 25px;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: black !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Projects Section */
+.projects-section {
+  flex: 1;
+  padding: 50px 15px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #f9cc41;
+}
+
+.project-card {
+  background: #ffff;
+  color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-content h5 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0a8df0;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #333;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  flex-shrink: 0;
+  padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-content h5 {
+    font-size: 18px;
+  }
+  .project-content p {
+    font-size: 13px;
+  }
+}
