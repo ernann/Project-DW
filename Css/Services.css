@@ -9,18 +9,18 @@
 body {
   background-color: #262533;
   color: white;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar */
 .my-nav {
-  background-color: #000000 !important;
+  background-color: #f9cc41 !important;
   padding: 5px 0;
-  position: sticky; /* menempel di atas */
+  position: sticky;
   top: 0;
-  z-index: 999; /* selalu di atas konten */
+  z-index: 999;
 }
 
 .nav-link {
@@ -43,17 +43,18 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   flex: 0 0 auto;
   min-height: 60vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px 10%;
 }
@@ -67,10 +68,12 @@ body {
   color: #f9cc41;
 }
 
-.hero p {
+.hero-desc {
   font-size: 18px;
-  margin: 10px 0 25px;
+  margin: 15px 0 25px;
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .btn-hero {
@@ -88,53 +91,41 @@ body {
   color: #111;
 }
 
+/* Service Cards */
+.service-card {
+  background-color: #4d4d4d;
+  color: black;
+  border-radius: 15px;
+  transition: transform 0.3s, background-color 0.3s;
+  padding: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Accordion */
+.accordion-button {
+  background-color: #4d4d4d;
+  color: black;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f9cc41;
+  color: #111;
+}
+
+.accordion-body {
+  background-color: #262533;
+  color: white;
+}
+
 /* Carousel */
-.carousel-above-footer {
-  flex: 0 0 auto;
-  margin-bottom: 0;
-}
-
-.carousel-inner {
-  padding: 0 12%; /* jarak kiri & kanan agar gambar terlihat lebih kecil */
-}
-
-.carousel-img {
-  width: 100%;
-  max-width: 900px; /* ukuran maksimal lebih kecil */
-  height: auto; /* tinggi menyesuaikan proporsi gambar */
-  margin: 0 auto; /* tengah secara horizontal */
-  object-fit: cover;
+.carousel-inner img {
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Grid */
-.container.text-center.my-5 .card {
-  background-color: #4d4d4d; /* ganti warna background */
-  color: black; /* warna teks */
-
-  border-radius: 15px; /* sudut membulat */
-  padding: 20px; /* jarak dalam card */
-  transition: transform 0.3s, background-color 0.3s; /* efek halus saat hover */
-}
-
-/* Efek hover */
-.container.text-center.my-5 .card:hover {
-  transform: translateY(-10px); /* naik sedikit saat hover */
-  background-color: #e0e0e0; /* ganti warna saat hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* efek bayangan lebih besar */
-}
-
-/* H2 di dalam card */
-.container.text-center.my-5 .card h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-/* P di dalam card */
-.container.text-center.my-5 .card p {
-  font-size: 1rem;
-  margin: 0;
 }
 
 /* Footer */
@@ -143,5 +134,4 @@ body {
   color: white;
   padding: 15px;
   text-align: center;
-  flex-shrink: 0;
 }
